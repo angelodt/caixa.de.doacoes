@@ -19,7 +19,6 @@ Este projeto visa proporcionar uma plataforma onde usuários podem cadastrar, pe
 - Java 17
 - Spring Boot 3
 - Spring Data JPA
-- Spring Security
 - Banco de Dados Relacional (MySQL, PostgreSQL, etc.)
 
 ## Como Utilizar
@@ -27,11 +26,11 @@ Este projeto visa proporcionar uma plataforma onde usuários podem cadastrar, pe
 1. **Pré-requisitos:**
    - JDK 17 ou superior
    - Maven
-   - Banco de Dados Relacional (configurado no arquivo `application.properties`)
+   - Banco de Dados Relacional (configurado no arquivo `application-dev.yml e application-prd.yml`)
 
 2. **Configuração:**
    - Clone o repositório: `git clone https://github.com/seu-usuario/nome-do-repositorio.git`
-   - Configure as credenciais do banco de dados no arquivo `src/main/resources/application.properties`
+   - Configure as credenciais do banco de dados no arquivo `src/main/resources/application.properties` ou nas variaveis de ambiente
 
 3. **Execução:**
    - Navegue até o diretório do projeto: `cd nome-do-repositorio`
