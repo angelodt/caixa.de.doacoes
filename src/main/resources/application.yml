@@ -10,8 +10,8 @@ management:
 info:
   application:
     name: caixa.de.doacoes
-    description: Projeto caixa de doações.
-    author: Ângelo Daiher
+    description: Projeto caixa de doacoes.
+    author: Angelo Daiher
     version: '@project.version@'
 spring:
   profiles:
