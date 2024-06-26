@@ -1,0 +1,18 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  info:
+    env:
+      enabled: true
+
+info:
+  application:
+    name: caixa.de.doacoes
+    description: Projeto caixa de doações.
+    author: Ângelo Daiher
+    version: '@project.version@'
+spring:
+  profiles:
+    active: dev
