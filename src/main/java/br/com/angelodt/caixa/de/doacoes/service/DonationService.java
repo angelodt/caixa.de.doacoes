@@ -6,13 +6,13 @@ import java.util.List;
 
 public interface DonationService {
 
-    public List<Donation> searchDonations(String searchTerm);
+    List<Donation> searchDonations(String searchTerm);
 
-    public Donation createDonation(Donation donation);
+    Donation createDonation(Donation donation);
 
-    public void deleteDonation(Long id);
+    void deleteDonation(Long id);
 
-    public Donation updateDonation(Long id, Donation donation);
+    Donation updateDonation(Long id, Donation donation);
 
-    public void addPhotoToDonation(Long donationId, String filename, String contentType, byte[] data);
+    void addPhotoToDonation(Long donationId, String filename, String contentType, byte[] data);
 }

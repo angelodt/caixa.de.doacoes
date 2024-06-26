@@ -3,7 +3,7 @@ package br.com.angelodt.caixa.de.doacoes.model;
 
 import jakarta.persistence.*;
 
-@Entity
+@Entity(name = "tb_user")
 public class User {
 
     @Id
