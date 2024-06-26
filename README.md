@@ -97,12 +97,24 @@ classDiagram
         + void addPhotoToDonation(Long donationId, String filename, String contentType, byte[] data)
     }
 
-    class UserController {
+    class DonationController {
         + ResponseEntity<?> searchDonations(String searchTerm)
         + ResponseEntity<?> createDonation(Donation donation)
         + ResponseEntity<?> deleteDonation(Long id)
         + ResponseEntity<?> updateDonation(Long id, Donation donation)
         + ResponseEntity<?> addPhotoToDonation(Long donationId, MultipartFile photo)
+    }
+
+    class UserController {
+        + ResponseEntity<?> createUser(User user)
+        + ResponseEntity<?> readUser(Long id)
+        + ResponseEntity<?> updateUser(Long id, User user)
+        + ResponseEntity<?> deleteUser(Long id)
+    }
+
+    class UserRepository {
+        <<SpringBean>>
+        - JpaRepository<User, Long> repository
     }
 
     class DonationRepository {
@@ -115,16 +127,11 @@ classDiagram
         - JpaRepository<DonationPhoto, Long> repository
     }
 
-    class UserRepository {
-        <<SpringBean>>
-        - JpaRepository<User, Long> repository
-    }
-
     User "1" -- "*" Donation : owns
     Donation "1" *-- "*" DonationPhoto : has
     DonationService "1" --> "*" Donation : uses
     DonationService "1" --> "1" DonationPhotoRepository : uses
     DonationService --> DonationRepository : uses
-    DonationService --> UserRepository : uses
-    UserController --> DonationService : uses
+    DonationController --> DonationService : uses
+    UserController --> UserRepository : uses
 ```
